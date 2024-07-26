@@ -25,7 +25,7 @@ h3 {
   font-weight: 400;
 
   &.lg-heading {
-    font-size: 6rem;
+    font-size:5.5rem;
   }
 
   &.sm-heading {
@@ -77,3 +77,52 @@ main {
     }
   }
 }
+
+.about-info {
+  display: grid;
+  grid-template-areas:
+    'bioimage bio bio'
+    'job1 job2 job3';
+  grid-template-columns: repeat(3, 1fr); 
+  grid-gap: 30px;
+
+
+  .bio-image {
+    grid-area: bioimage;
+    margin: auto;
+    border-radius: 50%;
+    border: $secondary-color 3px solid;
+  }
+
+  .bio {
+    grid-area: bio;
+    font-size: 1.3rem;
+  }
+
+  .job1 {
+    grid-area: job1;
+  }
+
+  .job2 {
+    grid-area: job2;
+  }
+
+  .job3 {
+    grid-area: job3;
+  }
+
+  .job{
+    background:lighten($primary-color, 5);
+    padding: 0.5rem;
+    border-bottom: $secondary-color 5px solid;
+  }
+}
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: darken($primary-color, 10);
+  color: set-text-color($primary-color);
+  height: 60px;
+}
+
+@import 'mobile';
